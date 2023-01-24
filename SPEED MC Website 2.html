@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Speed MC Assignments</title>
+<style>
+/* Add a background image */
+body {
+background-image: url("https://wallpaperaccess.com/full/6880573.jpg");
+background-size: cover;
+}
+/* Change the font to a more straight font */
+/* increase the font-size of the title */
+/* Add a 3D effect to the title */
+h2 {
+font-family: Arial, sans-serif;
+font-size: 40px;
+text-shadow: 2px 2px 2px #333;
+color: rgb(0,191,239);
+text-align: center;
+}
+/* Add a logo at the top left of the page */
+.logo {
+position: absolute;
+top: 10px;
+left: 10px;
+width: 50px;
+height: 50px;
+}
+/* Add CSS styles here to style the form */
+/* For example, you can set the font, add padding, etc. */
+/* You can also add classes to specific elements to style them differently */
+/* Example of CSS styles */
+/* Add some styles to the form container */
+.form-container {
+width: 50%;
+margin: 0 auto;
+padding: 20px;
+background-color: rgba(255, 255, 255, 0.7);
+border-radius: 10px;
+}
+/* Style the labels */
+label {
+font-weight: bold;
+margin-bottom: 10px;
+color: #333;
+}
+/* Style the input fields */
+input[type="text"], input[type="email"], textarea, input[type="number"] {
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-bottom: 20px;
+margin-top: 8px;
+}
+/* Style the submit button */
+input[type="submit"] {
+width: 100%;
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+/* Add hover effect to the submit button */
+input[type="submit"]:hover {
+background-color: #45a049;
+}
+/* Add some styles to the text */
+p {
+color: rgb(0,0,0);
+font-size: 18px;
+}
+/* Add styles for the pricing button */
+.pricing-btn {
+width: 150px;
+background-color: #333;
+color: #fff;
+padding: 10px;
+border-radius: 10px;
+text-align: center;
+cursor: pointer;
+}
+/* Add hover effect for the pricing button */
+.pricing-btn:hover {
+background-color: #444;
+}
+/* Add styles for the textbox */
+.textbox {
+width: 50%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing:
+border-box;
+margin-bottom: 20px;
+margin-top: 8px;
+display: none;
+animation: dropdown 0.5s ease-in-out;
+}
+
+@keyframes dropdown {
+from {
+    transform: scaleY(0);
+}
+to {
+    transform: scaleY(1);
+}
+}
+
+/* Add styles for the cashapp and zelle logos */
+.cashapp-logo, .zelle-logo {
+width: 50px;
+height: 50px;
+cursor: pointer;
+}
+
+</style>
+
+<script>
+// Add a click event listener to the pricing button
+document.querySelector('.pricing-btn').addEventListener('click', function() {
+
+// Show the textbox and the prompt
+document.querySelector('.textbox').style.display = 'block';
+alert("Every 500 words over the standard 2500 word count will be charged an extra , please insert your word count to get an exact price for your assignment");
+
+// Add an event listener for the textbox to calculate and return the price
+document.querySelector('.textbox').addEventListener('input', function() {
+
+// Get the value of the textbox
+var wordCount = this.value;
+
+// Calculate the price
+var price = 20;
+if (wordCount > 2500) {
+    var extraWords = wordCount - 2500;
+    var extraCharges = Math.ceil(extraWords / 500) * 5;
+    price += extraCharges;
+}
+
+// Return the price to the client
+alert("Your total price is $" + price);
+});
+});
+
+// Add a click event listener for the cashapp logo
+document.querySelector('.cashapp-logo').addEventListener('click', function() {
+
+// Show the cashapp username and prompt
+alert("My Cashapp username is DummyCashappUsername");
+alert("Please remember to write your Cashapp username used in the assignment details section so we know who we are receiving the payment from and who to send the assignment to!");
+});
+
+// Add a click event listener for the zelle logo
+document.querySelector('.zelle-logo').addEventListener('click', function() {
+
+// Show the zelle username and prompt
+alert("My Zelle username is DummyZelleUsername");
+alert("Please remember to write your Zelle username used in the assignment details section so we know who we are receiving the payment from and who to send the assignment to!");
+});
+</script>
+
+</head>
+<body>
+
+<h2>Speed MC Assignments</h2>
+
+<img src="logo.png" class="logo">
+
+<div class="form-container">
+
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+
+<label for="message">Assignment details:</label>
+<textarea id="message" name="message" rows="10" required></textarea>
+
+<button class="pricing-btn">Pricing</button>
+
+<input type="number
+
+<input type="number" class="textbox" placeholder="Word Count">
+
+<img src="cashapp-logo.png" class="cashapp-logo">
+
+<img src="zelle-logo.png" class="zelle-logo">
+
+</div>
+
+</body>
+</html>
